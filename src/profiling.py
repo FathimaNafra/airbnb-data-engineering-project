@@ -11,4 +11,16 @@ def profile_dataframe(df, name):
         "duplicate_rows": df.duplicated().sum()
     }
 
+
+
     return profile
+
+def check_duplicates(df):
+
+    duplicates = df.duplicated().sum()
+
+    print(
+        f"Duplicate Rows: {duplicates}"
+    )
+
+    return duplicates
