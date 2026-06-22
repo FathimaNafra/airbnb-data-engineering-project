@@ -1,0 +1,8 @@
+Column,Type
+listing_id,int64
+date,str
+available,str
+price,float64
+adjusted_price,float64
+minimum_nights,int64
+maximum_nights,int64

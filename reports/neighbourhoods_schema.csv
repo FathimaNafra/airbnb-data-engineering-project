@@ -1,0 +1,3 @@
+Column,Type
+neighbourhood_group,float64
+neighbourhood,str
