@@ -1,1 +1,4 @@
 2026-06-23 13:25:18,290 - INFO - Pipeline started
+2026-06-23 13:28:32,296 - ERROR - name 'load_listings' is not defined
+2026-06-23 13:30:42,907 - INFO - Pipeline started
+2026-06-23 13:31:20,560 - INFO - Data loaded successfully
