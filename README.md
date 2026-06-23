@@ -317,7 +317,7 @@ listing_master.csv
 
 ---
 
-# 5.Data Warehouse Star Schema
+## 5.Data Warehouse Star Schema
 
 The analytical warehouse was designed using a star schema to support reporting and business intelligence queries.
 
@@ -407,7 +407,7 @@ Metadata files:
 
 ---
 
-# 7.Exploratory Data Analysis
+# Exploratory Data Analysis
 
 Performed:
 
@@ -474,7 +474,7 @@ Additional Analysis:
 
 ---
 
-# 9.Machine Learning
+# Machine Learning
 
 ## Price Prediction
 
@@ -500,7 +500,7 @@ Explainability:
 
 ---
 
-## 10.Listing Segmentation
+## Listing Segmentation
 
 Clustering:
 
@@ -517,7 +517,7 @@ Outputs:
 
 ---
 
-## 11.Notebooks
+## Notebooks
 
 The `notebooks/` directory contains the analytical work for the project:
 
@@ -531,7 +531,7 @@ The `notebooks/` directory contains the analytical work for the project:
 
 ---
 
-# 12.Interactive Dashboard
+# Interactive Dashboard
 
 Technology:
 
@@ -552,7 +552,7 @@ Run:
 streamlit run app.py
 ```
 
-# 13.Reproducibility Instructions
+# Reproducibility Instructions
 
 ## 1. Clone Repository
 
@@ -613,7 +613,7 @@ streamlit run app.py
 
 ---
 
-# 14.Key Technologies
+# Key Technologies
 
 - Python
 - Pandas
@@ -627,7 +627,7 @@ streamlit run app.py
 
 ---
 
-# 15.Assumptions
+# Assumptions
 
 The following assumptions were made during implementation:
 
