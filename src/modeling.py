@@ -4,6 +4,7 @@ import pandas as pd
 master = pd.read_csv(
     "data/processed/listing_master.csv"
 )
+print(master.columns.tolist())
 
 #create database
 
@@ -77,4 +78,41 @@ CREATE OR REPLACE TABLE dim_neighbourhood AS
 SELECT *
 FROM dim_neighbourhood_df
 """)
+
+# Create Fact Table
+
+fact_listings = master[
+    [
+        "id",
+        "host_id",
+        "neighbourhood_cleansed",
+        "price",
+        "estimated_occupancy_l365d",
+        "estimated_revenue_l365d",
+        "review_frequency",
+        "price_per_bedroom"
+    ]
+].rename(
+    columns={
+        "estimated_occupancy_l365d": "occupancy_rate",
+        "estimated_revenue_l365d": "estimated_revenue"
+    }
+)
+
+conn.register(
+    "fact_df",
+    fact_listings
+)
+
+conn.execute("""
+CREATE OR REPLACE TABLE fact_listings AS
+SELECT *
+FROM fact_df
+""")
+
+print(
+    conn.execute(
+        "SHOW TABLES"
+    ).fetchall()
+)
 
