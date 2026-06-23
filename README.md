@@ -407,7 +407,7 @@ Metadata files:
 
 ---
 
-# Exploratory Data Analysis
+# 7.Exploratory Data Analysis
 
 Performed:
 
@@ -440,7 +440,7 @@ Performed:
 
 ---
 
-# Statistical Analysis
+# 8.Statistical Analysis
 
 Hypothesis Testing:
 
@@ -474,7 +474,7 @@ Additional Analysis:
 
 ---
 
-# Machine Learning
+# 9.Machine Learning
 
 ## Price Prediction
 
@@ -500,7 +500,7 @@ Explainability:
 
 ---
 
-## Listing Segmentation
+## 10.Listing Segmentation
 
 Clustering:
 
@@ -517,7 +517,7 @@ Outputs:
 
 ---
 
-## Notebooks
+## 11.Notebooks
 
 The `notebooks/` directory contains the analytical work for the project:
 
@@ -531,7 +531,7 @@ The `notebooks/` directory contains the analytical work for the project:
 
 ---
 
-# Interactive Dashboard
+# 12.Interactive Dashboard
 
 Technology:
 
@@ -552,7 +552,7 @@ Run:
 streamlit run app.py
 ```
 
-# Reproducibility Instructions
+# 13.Reproducibility Instructions
 
 ## 1. Clone Repository
 
@@ -613,7 +613,7 @@ streamlit run app.py
 
 ---
 
-# Key Technologies
+# 14.Key Technologies
 
 - Python
 - Pandas
@@ -627,7 +627,7 @@ streamlit run app.py
 
 ---
 
-# Assumptions
+# 15.Assumptions
 
 The following assumptions were made during implementation:
 
