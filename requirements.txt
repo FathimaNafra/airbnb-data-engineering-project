@@ -8,4 +8,3 @@ seaborn
 scipy
 statsmodels
 scikit-learn
-JupyterNotebook

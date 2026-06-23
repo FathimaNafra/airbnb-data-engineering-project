@@ -317,30 +317,77 @@ listing_master.csv
 
 ---
 
-## 5. Data Warehouse Modeling
+# 5.Data Warehouse Star Schema
 
-Implemented a Star Schema using DuckDB.
+The analytical warehouse was designed using a star schema to support reporting and business intelligence queries.
+
+```text
+                         ┌───────────────────────┐
+                         │     dim_host          │
+                         ├───────────────────────┤
+                         │ host_id (PK)          │
+                         │ host_name             │
+                         │ host_since            │
+                         │ host_tenure_years     │
+                         └───────────┬───────────┘
+                                     │
+                                     │
+                                     ▼
+
+┌───────────────────────┐     ┌────────────────────────────┐     ┌────────────────────────────┐
+│ dim_neighbourhood     │◄────│      fact_listings         │────►│      dim_listing           │
+├───────────────────────┤     ├────────────────────────────┤     ├────────────────────────────┤
+│ neighbourhood (PK)    │     │ listing_id (FK)            │     │ listing_id (PK)            │
+│ median_price          │     │ host_id (FK)               │     │ listing_name               │
+│ listing_density       │     │ neighbourhood (FK)         │     │ room_type                  │
+│ average_rating        │     │ price                      │     │ bedrooms                   │
+└───────────────────────┘     │ occupancy_rate             │     └────────────────────────────┘
+                              │ estimated_revenue          │
+                              │ review_frequency           │
+                              │ price_per_bedroom          │
+                              └────────────────────────────┘
+```
 
 ### Fact Table
 
-fact_listings
+**fact_listings**
 
 Measures:
 
 - Price
-- Revenue
-- Occupancy
+- Occupancy Rate
+- Estimated Revenue
 - Review Frequency
+- Price Per Bedroom
 
 ### Dimension Tables
 
-dim_host
+**dim_host**
 
-dim_listing
+- Host information
+- Host tenure metrics
 
-dim_neighbourhood
+**dim_listing**
 
----
+- Listing attributes
+- Room type
+- Bedroom count
+
+**dim_neighbourhood**
+
+- Neighbourhood-level aggregated metrics
+- Median price
+- Listing density
+- Average rating
+
+### Relationships
+
+| Source Dimension | Foreign Key | Fact Table |
+|------------------|------------|------------|
+| dim_host | host_id | fact_listings |
+| dim_listing | listing_id | fact_listings |
+| dim_neighbourhood | neighbourhood | fact_listings |
+
 
 ## 6. Automated Pipeline
 
@@ -470,6 +517,20 @@ Outputs:
 
 ---
 
+## Notebooks
+
+The `notebooks/` directory contains the analytical work for the project:
+
+| Notebook | Description |
+|-----------|-------------|
+| Data_engineering.ipynb | Data ingestion, cleaning, transformation, and enrichment pipeline validation |
+| Dataset_exploration.ipynb | Dataset overview, quality assessment, and exploratory inspection |
+| eda.ipynb | Exploratory Data Analysis (EDA), distributions, correlations, and visualizations |
+| statistical.ipynb | Hypothesis testing, confidence intervals, ANOVA, and statistical analysis |
+| machine_learning.ipynb | Feature engineering, model training, evaluation, and predictive analysis |
+
+---
+
 # Interactive Dashboard
 
 Technology:
@@ -483,7 +544,7 @@ Features:
 - Host Analysis
 - Geographic Insights
 - Statistical Findings
-- Machine Learning Results
+
 
 Run:
 
@@ -583,8 +644,7 @@ The following assumptions were made during implementation:
 
 **Fathima Nafra**
 
-BSc (Hons) Computer Science (Data Science)
-
+BSc (Hons) Computer Science Specialization in Data Science
 Faculty of Computing and Technology
 
 University of Kelaniya
