@@ -9,7 +9,7 @@ print(master.columns.tolist())
 #create database
 
 conn = duckdb.connect(
-    "data/airbnb_warehouse.duckdb"
+    "database/airbnb_warehouse.duckdb"
 )
 
 #Create Host Dimension
@@ -17,6 +17,7 @@ conn = duckdb.connect(
 dim_host = master[
     [
         "host_id",
+        
         "host_name",
         "host_since",
         "host_tenure_years"
