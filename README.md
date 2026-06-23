@@ -26,7 +26,48 @@ Inside Airbnb
 https://insideairbnb.com/
 
 ---
+# Architecture Diagram
 
+The following diagram illustrates the end-to-end architecture of the Airbnb Market Intelligence platform.
+
+```text
+                    Inside Airbnb Dataset
+                             │
+                             ▼
+                   Raw CSV Data Sources
+          (listings.csv, calendar.csv, reviews.csv)
+                             │
+                             ▼
+                   Data Ingestion Layer
+                             │
+                             ▼
+            Data Cleaning & Standardization
+                             │
+                             ▼
+                Data Enrichment & Joining
+                             │
+                             ▼
+                   listing_master.csv
+                             │
+                             ▼
+                  DuckDB Data Warehouse
+                             │
+         ┌───────────────────┼───────────────────┐
+         ▼                   ▼                   ▼
+     dim_host          dim_listing      dim_neighbourhood
+         \                 │                 /
+          \                │                /
+           \               │               /
+            └────── fact_listings ───────┘
+                             │
+         ┌───────────────────┼───────────────────┐
+         ▼                   ▼                   ▼
+        EDA        Statistical Analysis   Machine Learning
+                             │
+                             ▼
+                Streamlit Dashboard & Insights
+```
+---
 ## Business Problem
 
 Stakeholders such as product managers, revenue strategists, and operations teams require reliable market intelligence from Airbnb data.
