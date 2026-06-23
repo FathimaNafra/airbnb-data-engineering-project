@@ -2,3 +2,11 @@
 2026-06-23 13:28:32,296 - ERROR - name 'load_listings' is not defined
 2026-06-23 13:30:42,907 - INFO - Pipeline started
 2026-06-23 13:31:20,560 - INFO - Data loaded successfully
+2026-06-23 13:42:13,340 - INFO - Pipeline started
+2026-06-23 13:42:50,733 - INFO - Data loaded successfully
+2026-06-23 13:43:05,370 - INFO - New calendar records: 0
+2026-06-23 13:43:05,373 - INFO - Pipeline completed successfully
+2026-06-23 13:44:10,895 - INFO - Pipeline started
+2026-06-23 13:44:45,118 - INFO - Data loaded successfully
+2026-06-23 13:45:02,331 - INFO - New calendar records: 8142336
+2026-06-23 13:45:02,333 - INFO - Pipeline completed successfully
