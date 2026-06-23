@@ -5,12 +5,32 @@ from ingest import (
     load_reviews
 )
 import logging
+import time
 
 logging.basicConfig(
     filename="logs/pipeline.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
+#Add Retry Function
+def retry(func, retries=3):
+
+    for attempt in range(retries):
+
+        try:
+            return func()
+
+        except Exception as e:
+
+            logging.warning(
+                f"Attempt {attempt + 1} failed: {e}"
+            )
+
+            time.sleep(2)
+
+    raise Exception(
+        "Maximum retries exceeded"
+    )
 
 print(f"Processing city: {CITY}")
 
@@ -20,17 +40,23 @@ try:
 
     print("Loading data")
 
-    listings = load_listings(
+    listings = retry(
+    lambda: load_listings(
         f"{RAW_PATH}/listings.csv"
     )
+)
 
-    calendar = load_calendar(
+    calendar = retry(
+    lambda: load_calendar(
         f"{RAW_PATH}/calendar.csv"
     )
+)
 
-    reviews = load_reviews(
+    reviews = retry(
+    lambda: load_reviews(
         f"{RAW_PATH}/reviews.csv"
     )
+)
 
     logging.info(
         "Data loaded successfully"
