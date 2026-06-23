@@ -613,6 +613,12 @@ streamlit run app.py
 
 ---
 
+## Dashboard Preview
+
+![Dashboard Preview](reports/dashboard.png)
+
+---
+
 ## Key Technologies
 
 - Python

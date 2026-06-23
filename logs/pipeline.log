@@ -10,3 +10,14 @@
 2026-06-23 13:44:45,118 - INFO - Data loaded successfully
 2026-06-23 13:45:02,331 - INFO - New calendar records: 8142336
 2026-06-23 13:45:02,333 - INFO - Pipeline completed successfully
+2026-06-23 21:19:34,378 - INFO - Pipeline started
+2026-06-23 21:20:09,486 - INFO - Data loaded successfully
+2026-06-23 21:20:39,960 - ERROR - Pipeline failed: Unable to allocate 270. MiB for an array with shape (35357974,) and data type object
+2026-06-23 21:22:58,458 - INFO - Pipeline started
+2026-06-23 21:23:40,290 - INFO - Data loaded successfully
+2026-06-23 21:23:55,290 - INFO - New calendar records: 8142336
+2026-06-23 21:23:55,293 - INFO - Pipeline completed successfully
+2026-06-23 21:25:20,542 - INFO - Pipeline started
+2026-06-23 21:26:16,133 - INFO - Data loaded successfully
+2026-06-23 21:26:31,228 - INFO - New calendar records: 8142336
+2026-06-23 21:26:31,230 - INFO - Pipeline completed successfully
