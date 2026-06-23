@@ -116,3 +116,16 @@ print(
     ).fetchall()
 )
 
+
+print(
+    conn.execute("""
+    SELECT
+        neighbourhood_cleansed,
+        AVG(estimated_revenue) AS avg_revenue
+    FROM fact_listings
+    GROUP BY neighbourhood_cleansed
+    ORDER BY avg_revenue DESC
+    LIMIT 10
+    """).fetchdf()
+)
+
