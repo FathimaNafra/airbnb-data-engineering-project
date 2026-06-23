@@ -6,6 +6,15 @@ from ingest import (
 )
 import logging
 import time
+from datetime import datetime
+
+
+with open(
+    "data/metadata/last_run.txt"
+) as f:
+
+    last_run = f.read().strip()
+
 
 logging.basicConfig(
     filename="logs/pipeline.log",
@@ -69,3 +78,12 @@ except Exception as e:
     )
 
     raise
+
+with open(
+    "data/metadata/last_run.txt",
+    "w"
+) as f:
+
+    f.write(
+        str(datetime.today().date())
+    )
