@@ -1,0 +1,11 @@
+pandas
+numpy
+streamlit
+plotly
+duckdb
+matplotlib
+seaborn
+scipy
+statsmodels
+scikit-learn
+JupyterNotebook
