@@ -207,3 +207,286 @@ airbnb-market-analysis/
 
 
 ---
+
+---
+
+# Dataset Description
+
+## listings.csv
+
+Contains listing information including:
+
+- Price
+- Room Type
+- Property Type
+- Host Information
+- Availability
+- Review Scores
+
+## calendar.csv
+
+Contains daily availability and pricing information for each listing.
+
+## reviews.csv
+
+Contains review history and review dates.
+
+## neighbourhoods.csv
+
+Contains neighbourhood reference information.
+
+---
+
+# Data Engineering Implementation
+
+## 1. Data Ingestion
+
+Implemented reusable ingestion functions for:
+
+- Listings
+- Calendar
+- Reviews
+
+Features:
+
+- Repeatable loading process
+- Configurable city selection
+
+---
+
+## 2. Data Profiling
+
+Generated:
+
+- Row counts
+- Null percentages
+- Cardinality statistics
+- Schema documentation
+
+Outputs:
+
+- listings_schema.csv
+- calendar_schema.csv
+- reviews_schema.csv
+- neighbourhoods_schema.csv
+
+---
+
+## 3. Data Cleaning
+
+Implemented:
+
+- Price standardization
+- Date parsing
+- Text normalization
+- Missing value treatment
+- Validation checks
+
+---
+
+## 4. Data Enrichment
+
+Created:
+
+### Review Aggregates
+
+- Total Reviews
+- First Review Date
+- Last Review Date
+
+### Occupancy Metrics
+
+- Occupancy Rate
+- Estimated Revenue
+
+### Neighbourhood Metrics
+
+- Median Price
+- Listing Density
+- Average Rating
+
+### Derived Features
+
+- Host Tenure
+- Review Frequency
+- Price Per Bedroom
+
+Output:
+
+listing_master.csv
+
+---
+
+## 5. Data Warehouse Modeling
+
+Implemented a Star Schema using DuckDB.
+
+### Fact Table
+
+fact_listings
+
+Measures:
+
+- Price
+- Revenue
+- Occupancy
+- Review Frequency
+
+### Dimension Tables
+
+dim_host
+
+dim_listing
+
+dim_neighbourhood
+
+---
+
+## 6. Automated Pipeline
+
+Features:
+
+- Configuration-driven execution
+- Logging
+- Error handling
+- Retry mechanism
+- Incremental processing
+- Metadata tracking
+
+Metadata files:
+
+- metadata_log.csv
+- last_run.txt
+
+---
+
+# Exploratory Data Analysis
+
+Performed:
+
+### Summary Statistics
+
+- Price Distribution
+- Availability Distribution
+- Review Distribution
+
+### Geographic Analysis
+
+- Listing Density Maps
+- Neighbourhood Price Analysis
+
+### Temporal Analysis
+
+- Seasonality
+- Review Trends
+- Host Tenure Trends
+
+### Host Analysis
+
+- Portfolio Segmentation
+- Superhost Analysis
+
+### Demand Analysis
+
+- Review Frequency
+- Review Score Drivers
+
+---
+
+# Statistical Analysis
+
+Hypothesis Testing:
+
+### H1
+
+Entire homes are priced higher than private rooms.
+
+### H2
+
+Superhosts receive higher ratings.
+
+### H3
+
+Listings with >10 reviews differ in pricing.
+
+### H4
+
+Neighbourhood prices differ significantly.
+
+### H5
+
+Weekend and weekday pricing differ significantly.
+
+Additional Analysis:
+
+- Confidence Intervals
+- Effect Sizes
+- Correlation Analysis
+- OLS Regression
+- VIF Analysis
+
+---
+
+# Machine Learning
+
+## Price Prediction
+
+Target Variable:
+
+Price
+
+Models:
+
+- Linear Regression
+- Random Forest
+- Gradient Boosting
+
+Evaluation Metrics:
+
+- MAE
+- RMSE
+- MAPE
+
+Explainability:
+
+- SHAP Feature Importance
+
+---
+
+## Listing Segmentation
+
+Clustering:
+
+- K-Means
+
+Evaluation:
+
+- Silhouette Score
+
+Outputs:
+
+- Listing Segments
+- Business Profiles
+
+---
+
+# Interactive Dashboard
+
+Technology:
+
+Streamlit
+
+Features:
+
+- KPI Metrics
+- Price Analysis
+- Host Analysis
+- Geographic Insights
+- Statistical Findings
+- Machine Learning Results
+
+Run:
+
+```bash
+streamlit run app.py
+
