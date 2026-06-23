@@ -85,7 +85,7 @@ Streamlit Dashboard
 ---
 
 # Repository Structure
-airbnb-market-analysis/
+airbnb-data-engineering-project/
 
 ├── data/
 
@@ -496,8 +496,8 @@ streamlit run app.py
 ## 1. Clone Repository
 
 ```bash
-git clone <repository-url>
-cd airbnb-market-analysis
+git clone https://github.com/FathimaNafra/airbnb-data-engineering-project
+cd airbnb-data-engineering-project
 ```
 
 ## 2. Create Virtual Environment
@@ -578,26 +578,6 @@ The following assumptions were made during implementation:
 
 ---
 
-# AI Usage Disclosure
-
-AI tools were used responsibly throughout the project to assist with:
-
-- Code guidance and implementation support
-- Debugging and troubleshooting
-- Statistical analysis discussions
-- Dashboard design suggestions
-- Documentation and report writing support
-
-All AI-generated suggestions were:
-
-- Reviewed manually
-- Modified where necessary
-- Tested within the project environment
-- Validated against dataset outputs before inclusion
-
-Final implementation decisions, analysis, debugging, testing, and business interpretations were completed by the author.
-
----
 
 # Author
 
