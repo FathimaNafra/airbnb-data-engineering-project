@@ -489,4 +489,122 @@ Run:
 
 ```bash
 streamlit run app.py
+```
 
+# Reproducibility Instructions
+
+## 1. Clone Repository
+
+```bash
+git clone <repository-url>
+cd airbnb-market-analysis
+```
+
+## 2. Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Activate Environment
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### Mac/Linux
+
+```bash
+source venv/bin/activate
+```
+
+## 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## 4. Execute Data Pipeline
+
+Run the automated data pipeline to perform ingestion, cleaning, enrichment, and metadata tracking.
+
+```bash
+python src/pipeline.py
+```
+
+## 5. Build Data Warehouse
+
+Create the analytical warehouse and star schema in DuckDB.
+
+```bash
+python src/modeling.py
+```
+
+## 6. Run Interactive Dashboard
+
+Launch the Streamlit dashboard.
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# Key Technologies
+
+- Python
+- Pandas
+- NumPy
+- DuckDB
+- Scikit-Learn
+- Statsmodels
+- Matplotlib
+- Seaborn
+- Streamlit
+
+---
+
+# Assumptions
+
+The following assumptions were made during implementation:
+
+- Missing review score values were imputed using median values.
+- Review frequency was used as a proxy indicator for booking demand.
+- Occupancy was estimated using calendar availability information.
+- Analysis was conducted using the London Airbnb dataset only.
+- Historical booking information was inferred from available review and calendar data.
+
+---
+
+# AI Usage Disclosure
+
+AI tools were used responsibly throughout the project to assist with:
+
+- Code guidance and implementation support
+- Debugging and troubleshooting
+- Statistical analysis discussions
+- Dashboard design suggestions
+- Documentation and report writing support
+
+All AI-generated suggestions were:
+
+- Reviewed manually
+- Modified where necessary
+- Tested within the project environment
+- Validated against dataset outputs before inclusion
+
+Final implementation decisions, analysis, debugging, testing, and business interpretations were completed by the author.
+
+---
+
+# Author
+
+**Fathima Nafra**
+
+BSc (Hons) Computer Science (Data Science)
+
+Faculty of Computing and Technology
+
+University of Kelaniya
