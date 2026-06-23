@@ -84,168 +84,72 @@ This project provides:
 
 ---
 
-## Project Architecture
 
-Raw Data
-(listings, calendar, reviews)
+## Project Structure
 
-↓
-
-Data Ingestion
-
-↓
-
-Data Cleaning & Validation
-
-↓
-
-Data Enrichment & Feature Engineering
-
-↓
-
-Master Dataset
-
-(listing_master.csv)
-
-↓
-
-DuckDB Warehouse
-
-↓
-
-EDA + Statistical Analysis
-
-↓
-
-Machine Learning Models
-
-↓
-
-Streamlit Dashboard
-
----
-
-## Repository Structure
+```text
 airbnb-data-engineering-project/
-
+│
 ├── data/
-
-│ ├── raw/London/
-
-│ │ ├── listings.csv
-
-│ │ ├── calendar.csv
-
-│ │ ├── reviews.csv
-
-│ │ └── neighbourhoods.csv
-
+│   ├── raw/
+│   │   └── London/
+│   │       ├── listings.csv
+│   │       ├── calendar.csv
+│   │       ├── reviews.csv
+│   │       └── neighbourhoods.csv
+│   │
+│   ├── processed/
+│   │   ├── listings_clean.csv
+│   │   ├── reviews_clean.csv
+│   │   ├── calendar_clean.csv
+│   │   ├── occupancy.csv
+│   │   └── listing_master.csv
+│   │
+│   └── metadata/
+│       ├── metadata_log.csv
+│       └── last_run.txt
 │
-
-│ ├── processed/
-
-│ │ ├── listings_clean.csv
-
-│ │ ├── reviews_clean.csv
-
-│ │ ├── calendar_clean.csv
-
-│ │ ├── occupancy.csv
-
-│ │ └── listing_master.csv
-
-│
-
-│ └── metadata/
-
-│ ├── metadata_log.csv
-
-│ └── last_run.txt
-
-│
-
 ├── database/
-
-│ └── airbnb_warehouse.duckdb
-
+│   └── airbnb_warehouse.duckdb
 │
-
 ├── logs/
-
-│ └── pipeline.log
-
+│   └── pipeline.log
 │
-
 ├── notebooks/
-
-│ ├── Data_engineering.ipynb
-
-│ ├── Dataset_exploration.ipynb
-
-│ ├── eda.ipynb
-
-│ ├── statistical.ipynb
-
-│ └── machine_learning.ipynb
-
+│   ├── Data_engineering.ipynb
+│   ├── Dataset_exploration.ipynb
+│   ├── eda.ipynb
+│   ├── statistical.ipynb
+│   └── machine_learning.ipynb
 │
-
 ├── reports/
-
-│ ├── summary_statistics.csv
-
-│ ├── listings_schema.csv
-
-│ ├── calendar_schema.csv
-
-│ ├── reviews_schema.csv
-
-│ ├── neighbourhoods_schema.csv
-
-│ ├── price_distribution.png
-
-│ ├── listing_density_map.png
-
-│ └── lineage.md
-
+│   ├── summary_statistics.csv
+│   ├── listings_schema.csv
+│   ├── calendar_schema.csv
+│   ├── reviews_schema.csv
+│   ├── neighbourhoods_schema.csv
+│   ├── dashboard.png
+│   └── lineage.md
 │
-
 ├── sql/
-
-│ └── analytics.sql
-
+│   └── analytics.sql
 │
-
 ├── src/
-
-│ ├── config.py
-
-│ ├── ingest.py
-
-│ ├── cleaning.py
-
-│ ├── enrichment.py
-
-│ ├── validation.py
-
-│ ├── profiling.py
-
-│ ├── metadata.py
-
-│ ├── modeling.py
-
-│ └── pipeline.py
-
+│   ├── config.py
+│   ├── ingest.py
+│   ├── cleaning.py
+│   ├── enrichment.py
+│   ├── validation.py
+│   ├── profiling.py
+│   ├── metadata.py
+│   ├── modeling.py
+│   └── pipeline.py
 │
-
 ├── app.py
-
 ├── requirements.txt
-
 ├── .gitignore
-
 └── README.md
-
+```
 
 ---
 
