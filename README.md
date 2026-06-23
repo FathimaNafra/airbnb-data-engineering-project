@@ -27,7 +27,7 @@ https://insideairbnb.com/
 
 ---
 
-# Business Problem
+## Business Problem
 
 Stakeholders such as product managers, revenue strategists, and operations teams require reliable market intelligence from Airbnb data.
 
@@ -43,7 +43,7 @@ This project provides:
 
 ---
 
-# Project Architecture
+## Project Architecture
 
 Raw Data
 (listings, calendar, reviews)
@@ -84,7 +84,7 @@ Streamlit Dashboard
 
 ---
 
-# Repository Structure
+## Repository Structure
 airbnb-data-engineering-project/
 
 ├── data/
@@ -210,9 +210,9 @@ airbnb-data-engineering-project/
 
 ---
 
-# Dataset Description
+## Dataset Description
 
-## listings.csv
+### listings.csv
 
 Contains listing information including:
 
@@ -223,23 +223,23 @@ Contains listing information including:
 - Availability
 - Review Scores
 
-## calendar.csv
+### calendar.csv
 
 Contains daily availability and pricing information for each listing.
 
-## reviews.csv
+### reviews.csv
 
 Contains review history and review dates.
 
-## neighbourhoods.csv
+### neighbourhoods.csv
 
 Contains neighbourhood reference information.
 
 ---
 
-# Data Engineering Implementation
+## Data Engineering Implementation
 
-## 1. Data Ingestion
+### 1. Data Ingestion
 
 Implemented reusable ingestion functions for:
 
@@ -254,7 +254,7 @@ Features:
 
 ---
 
-## 2. Data Profiling
+### 2. Data Profiling
 
 Generated:
 
@@ -272,7 +272,7 @@ Outputs:
 
 ---
 
-## 3. Data Cleaning
+### 3. Data Cleaning
 
 Implemented:
 
@@ -284,7 +284,7 @@ Implemented:
 
 ---
 
-## 4. Data Enrichment
+### 4. Data Enrichment
 
 Created:
 
@@ -317,7 +317,7 @@ listing_master.csv
 
 ---
 
-## 5.Data Warehouse Star Schema
+### 5.Data Warehouse Star Schema
 
 The analytical warehouse was designed using a star schema to support reporting and business intelligence queries.
 
@@ -389,7 +389,7 @@ Measures:
 | dim_neighbourhood | neighbourhood | fact_listings |
 
 
-## 6. Automated Pipeline
+### 6. Automated Pipeline
 
 Features:
 
@@ -407,7 +407,7 @@ Metadata files:
 
 ---
 
-# Exploratory Data Analysis
+## Exploratory Data Analysis
 
 Performed:
 
@@ -440,7 +440,7 @@ Performed:
 
 ---
 
-# 8.Statistical Analysis
+## Statistical Analysis
 
 Hypothesis Testing:
 
@@ -474,9 +474,9 @@ Additional Analysis:
 
 ---
 
-# Machine Learning
+## Machine Learning
 
-## Price Prediction
+### Price Prediction
 
 Target Variable:
 
@@ -500,7 +500,7 @@ Explainability:
 
 ---
 
-## Listing Segmentation
+### Listing Segmentation
 
 Clustering:
 
@@ -531,7 +531,7 @@ The `notebooks/` directory contains the analytical work for the project:
 
 ---
 
-# Interactive Dashboard
+## Interactive Dashboard
 
 Technology:
 
@@ -552,16 +552,16 @@ Run:
 streamlit run app.py
 ```
 
-# Reproducibility Instructions
+## Reproducibility Instructions
 
-## 1. Clone Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/FathimaNafra/airbnb-data-engineering-project
 cd airbnb-data-engineering-project
 ```
 
-## 2. Create Virtual Environment
+### 2. Create Virtual Environment
 
 ```bash
 python -m venv venv
@@ -581,13 +581,13 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-## 3. Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 4. Execute Data Pipeline
+### 4. Execute Data Pipeline
 
 Run the automated data pipeline to perform ingestion, cleaning, enrichment, and metadata tracking.
 
@@ -595,7 +595,7 @@ Run the automated data pipeline to perform ingestion, cleaning, enrichment, and 
 python src/pipeline.py
 ```
 
-## 5. Build Data Warehouse
+### 5. Build Data Warehouse
 
 Create the analytical warehouse and star schema in DuckDB.
 
@@ -603,7 +603,7 @@ Create the analytical warehouse and star schema in DuckDB.
 python src/modeling.py
 ```
 
-## 6. Run Interactive Dashboard
+### 6. Run Interactive Dashboard
 
 Launch the Streamlit dashboard.
 
@@ -613,7 +613,7 @@ streamlit run app.py
 
 ---
 
-# Key Technologies
+## Key Technologies
 
 - Python
 - Pandas
@@ -627,7 +627,7 @@ streamlit run app.py
 
 ---
 
-# Assumptions
+## Assumptions
 
 The following assumptions were made during implementation:
 
@@ -640,7 +640,7 @@ The following assumptions were made during implementation:
 ---
 
 
-# Author
+## Author
 
 **Fathima Nafra**
 
